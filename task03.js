@@ -17,6 +17,7 @@ const randomArrayGeneratorTask03 = (numberOfItems, n, m, evenOdd) => {
     }
 
     console.log(randomArray);
+    return randomArray;
 };
 
 randomArrayGeneratorTask03(5, 33, 76, 'even');

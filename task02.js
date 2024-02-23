@@ -9,6 +9,7 @@ const randomArrayGeneratorTask02 = (numberOfItems, n, m) => {
     }
 
     console.log(randomArray);
+    return randomArray;
 };
 
 randomArrayGeneratorTask02(5, 33, 76);

@@ -10,6 +10,7 @@ const isLeapYear = (n, m) => {
     }
 
     console.log(leapYearsArray);
+    return leapYearsArray;
 };
 
 isLeapYear(1000, 2000);

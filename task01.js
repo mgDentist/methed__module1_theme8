@@ -6,6 +6,7 @@ const randomArrayGenerator = (numberOfItems) => {
     }
 
     console.log(randomArray);
+    return randomArray;
 };
 
 randomArrayGenerator(5);

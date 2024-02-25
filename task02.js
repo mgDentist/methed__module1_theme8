@@ -1,11 +1,14 @@
 const randomArrayGeneratorTask02 = (numberOfItems, n, m) => {
     const randomArray = [];
 
-    const minNumber = Math.min(n, m);
-    const maxNumber = Math.max(n, m);
-
-    for (let i = 0; i < numberOfItems; i++) {
-        randomArray.push(Math.floor((Math.random() * (maxNumber - minNumber + 1)) + minNumber));
+    if (m > n) {
+        for (let i = 0; i < numberOfItems; i++) {
+            randomArray.push(Math.floor((Math.random() * (m - n + 1)) + n));
+        }
+    } else if (m < n) {
+        for (let i = 0; i < numberOfItems; i++) {
+            randomArray.push(Math.floor((Math.random() * (n - m + 1)) + m));
+        }
     }
 
     console.log(randomArray);
@@ -13,3 +16,4 @@ const randomArrayGeneratorTask02 = (numberOfItems, n, m) => {
 };
 
 randomArrayGeneratorTask02(5, 33, 76);
+randomArrayGeneratorTask02(5, -10, 10);

@@ -1,11 +1,17 @@
 const isLeapYear = (n, m) => {
-    const minNumber = Math.min(n, m);
-    const maxNumber = Math.max(n, m);
     const leapYearsArray = [];
 
-    for (let year = minNumber; year <= maxNumber; year++) {
-        if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-            leapYearsArray.push(year);
+    if (m > n) {
+        for (let year = n; year <= m; year++) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                leapYearsArray.push(year);
+            }
+        }
+    } else if (m < n) {
+        for (let year = m; year <= n; year++) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                leapYearsArray.push(year);
+            }
         }
     }
 
